@@ -3,10 +3,9 @@ services:
     name: mojiza-app
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python runer.py run_script
+    startCommand: python runer.py run_script -n $PORT
+    plan: free
     envVars:
       - key: PYTHON_VERSION
         value: 3.10
-    autoDeploy: true
-    plan: free
     region: oregon
