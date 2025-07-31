@@ -5,6 +5,10 @@ from .settings import STATIC
 def fullpage():
     page = HTML(title_document="Full HTML Elements Example")
     page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.meta(name="google-site-verification", content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
+    # < meta
+    # name = "google-site-verification"
+    # content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4" / >
 
     # CSS yaratish va qo'shish
     # css = """
