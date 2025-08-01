@@ -6,29 +6,17 @@ def fullpage():
     page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
     page.meta(name="google-site-verification", content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
     head = page.head()
-
-    # Basic meta
-    head.meta(charset="UTF-8")
-    head.title("Full HTML Elements Example – MOJIZA Framework")
-    head.meta(name="description", content="Full documentation for MTML (Mojiza HTML) — a Pythonic HTML rendering engine.")
-    head.meta(name="keywords", content="Mojiza, MTML, Python HTML, web framework, dark theme, Mojiza Framework")
-    head.meta(name="author", content="Muhiddinov Abdulhodiy")
-    head.meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    head.meta(name="robots", content="index, follow")
-    head.meta(name="google-site-verification", content="co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
-
-
     head.meta(property="og:title", content="Full HTML Elements – MOJIZA Framework")
-    head.meta(property="og:description", content="Explore full MTML documentation, the Python-based HTML engine by Mojiza Framework.")
+    head.meta(property="og:description",
+              content="Explore full MTML documentation, the Python-based HTML engine by Mojiza Framework.")
     head.meta(property="og:type", content="website")
     head.meta(property="og:url", content="https://mojiza-doc-sitr.onrender.com/")
-    head.meta(property="og:image", content=Static("mojza.png"))
+    head.meta(property="og:image", content="https://mojiza-doc-sitr.onrender.com/static/mojza.png")
 
-    # Twitter Card
     head.meta(name="twitter:card", content="summary_large_image")
     head.meta(name="twitter:title", content="Full HTML Elements – MOJIZA Framework")
     head.meta(name="twitter:description", content="Explore full MTML documentation with Mojiza Framework.")
-    head.meta(name="twitter:image", content=Static("mojza.png"))
+    head.meta(name="twitter:image", content="https://mojiza-doc-sitr.onrender.com/static/mojza.png")
 
     # < meta
     # name = "google-site-verification"
