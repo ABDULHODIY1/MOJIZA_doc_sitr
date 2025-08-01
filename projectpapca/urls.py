@@ -1,5 +1,4 @@
 from MOJIZA.engine.routing import PAGE
-from MOJIZA.engine.server import HTML
 from projectpapca.views import fullpage, newpage, login_view, guess_number_page,project_home, mojiza_mtml_documentation
 
 base_urls = "/"  # localhost:8000/papca
@@ -31,3 +30,6 @@ def doc(method, params):
     return mojiza_mtml_documentation()
 
 
+# @PAGE('/test')
+# def test(method, params):
+#     return test()

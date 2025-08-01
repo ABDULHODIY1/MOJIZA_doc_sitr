@@ -1,11 +1,10 @@
-from pickle import FRAME
-
 from MOJIZA.engine.server import HTML
+from MOJIZA.static.make_static import Static
 import random
 
 def project_home():
     page = HTML(title_document = "new page for mojiza test")
-    page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
     page.div(h_class="ho").h1("hello")
     list_of_numbers = [i for i in range(100)]
     page.div(h_class="test").p(f"{list_of_numbers}")
@@ -20,7 +19,7 @@ def guess_number_page(method, params):
         guess_number_page._secret = random.randint(1, 100)
 
     page = HTML(title_document="🎲 Taxmin O'yini")
-    page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
 
     page.add_styles("""
         body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; }
@@ -71,7 +70,7 @@ def guess_number_page(method, params):
 
 def mojiza_mtml_documentation():
     page = HTML(title_document="🌑 MTML Documentation | Mojiza", path="/doc")
-    page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
 
     # Dark mode styling
     page.style("""
@@ -124,7 +123,9 @@ def mojiza_mtml_documentation():
             "title": "🎬 Getting Started",
             "desc": "Import HTML class and initialize a new page.",
             "code": '''from MOJIZA.engine.server import HTML \n
-             page = HTML(title_document="My First MTML Page")'''
+            def page_view_set():
+                page = HTML(title_document="My First MTML Page")
+                '''
         },
         {
             "title": "🧠 Head & Meta Tags",

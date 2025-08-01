@@ -1,11 +1,36 @@
 from MOJIZA.engine.server import HTML
-from .settings import STATIC
-
+from MOJIZA.static.make_static import Static
 
 def fullpage():
     page = HTML(title_document="Full HTML Elements Example")
-    page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
     page.meta(name="google-site-verification", content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
+    head = page.head()
+
+    # Basic meta
+    head.meta(charset="UTF-8")
+    head.title("Full HTML Elements Example – MOJIZA Framework")
+    head.meta(name="description", content="Full documentation for MTML (Mojiza HTML) — a Pythonic HTML rendering engine.")
+    head.meta(name="keywords", content="Mojiza, MTML, Python HTML, web framework, dark theme, Mojiza Framework")
+    head.meta(name="author", content="Muhiddinov Abdulhodiy")
+    head.meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    head.meta(name="robots", content="index, follow")
+    head.meta(name="google-site-verification", content="co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
+
+    head.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
+
+    head.meta(property="og:title", content="Full HTML Elements – MOJIZA Framework")
+    head.meta(property="og:description", content="Explore full MTML documentation, the Python-based HTML engine by Mojiza Framework.")
+    head.meta(property="og:type", content="website")
+    head.meta(property="og:url", content="https://mojiza-doc-sitr.onrender.com/")
+    head.meta(property="og:image", content=Static("mojza.png"))
+
+    # Twitter Card
+    head.meta(name="twitter:card", content="summary_large_image")
+    head.meta(name="twitter:title", content="Full HTML Elements – MOJIZA Framework")
+    head.meta(name="twitter:description", content="Explore full MTML documentation with Mojiza Framework.")
+    head.meta(name="twitter:image", content=Static("mojza.png"))
+
     # < meta
     # name = "google-site-verification"
     # content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4" / >
@@ -209,7 +234,6 @@ def fullpage():
         header.li().a("Home", href="/"),
         header.li().a("document", href="/doc"),
         header.li().a("game", href="/GAME"),
-        header.li().a("form test", href="/home")
     )
 
     # Main Content
@@ -224,7 +248,7 @@ def fullpage():
         section_article.p(
             "MOJIZA is a custom Python web framework designed to simplify web development by allowing UI creation through Python code."),
         section_article.figure(
-            section_article.img(src="https://via.placeholder.com/150", alt="Sample Image"),
+            section_article.img(src=Static("mojza.png"), alt="Sample Image"),
             section_article.figcaption("Figure 1: Sample Image")
         ),
         section_article.footer("Article footer information.")
@@ -373,7 +397,7 @@ def fullpage():
 
 def newpage():
     page = HTML(title_document = "new page for mojiza test")
-    page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
     page.div(h_class="ho").p("hello")
     list_of_numbers = [i for i in range(100)]
 
@@ -388,7 +412,7 @@ def newpage():
 
 def login_view():
     page = HTML(title_document="Login Page - Mojiza Framework")
-    page.link(rel="icon", href=f"/static/mojiza.png", type="image/png")
+    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
 
 
     # CSS qo‘shamiz
@@ -445,5 +469,3 @@ from .backend_html import project_home, guess_number_page, mojiza_mtml_documenta
 
 project_home()
 mojiza_mtml_documentation()
-
-
