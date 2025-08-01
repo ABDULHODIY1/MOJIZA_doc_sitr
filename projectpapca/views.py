@@ -17,7 +17,6 @@ def fullpage():
     head.meta(name="robots", content="index, follow")
     head.meta(name="google-site-verification", content="co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
 
-    head.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
 
     head.meta(property="og:title", content="Full HTML Elements – MOJIZA Framework")
     head.meta(property="og:description", content="Explore full MTML documentation, the Python-based HTML engine by Mojiza Framework.")
