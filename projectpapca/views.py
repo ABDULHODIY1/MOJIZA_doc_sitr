@@ -3,7 +3,8 @@ from MOJIZA.static.make_static import Static
 
 def fullpage():
     page = HTML(title_document="Full HTML Elements Example")
-    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
+    page.meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    page.link(rel="icon", href=Static("image/Sharingan_Kakashi.png"), type="image/png")
     page.meta(name="google-site-verification", content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4")
     head = page.head()
     head.meta(property="og:title", content="Full HTML Elements – MOJIZA Framework")
@@ -21,19 +22,6 @@ def fullpage():
     # < meta
     # name = "google-site-verification"
     # content = "co_7zidS_mzayw38XpEOOPVcmZZbPJHQw9whIzgQne4" / >
-
-    # CSS yaratish va qo'shish
-    # css = """
-    # body { font-family: Arial, sans-serif; }
-    # header, footer { background-color: #f1f1f1; padding: 20px; text-align: center; }
-    # nav ul { list-style-type: none; padding: 0; }
-    # nav ul li { display: inline; margin-right: 10px; }
-    # main { margin: 20px; }
-    # section, article, aside { margin-bottom: 20px; }
-    # table { width: 100%; border-collapse: collapse; }
-    # table, th, td { border: 1px solid black; }
-    # th, td { padding: 10px; text-align: left; }
-    # """
     css = """
     * {
         box-sizing: border-box;
@@ -235,7 +223,7 @@ def fullpage():
         section_article.p(
             "MOJIZA is a custom Python web framework designed to simplify web development by allowing UI creation through Python code."),
         section_article.figure(
-            section_article.img(src=Static("mojza.png"), alt="Sample Image"),
+            section_article.img(src=Static("image/mojza.png"), alt="Sample Image"),
             section_article.figcaption("Figure 1: Sample Image")
         ),
         section_article.footer("Article footer information.")
@@ -305,8 +293,8 @@ def fullpage():
     # Section: Multimedia
     section_multimedia = main.section(h_id="multimedia-section", h_class="section")
     section_multimedia.h2("Multimedia Content")
-    section_multimedia.video(src="https://www.w3schools.com/html/mov_bbb.mp4", controls=True, width="320")
-    section_multimedia.audio(src="https://www.w3schools.com/html/horse.mp3", controls=True)
+    section_multimedia.video(src=Static("video/a.mp4"), controls=True, width="320")
+    section_multimedia.audio(src=Static("audio/MVSTERIOUSTopicSLAVAFUNK!.mp3"), controls=True)
 
     # Section: Lists
     section_lists = main.section(h_id="lists-section", h_class="section")
@@ -381,10 +369,10 @@ def fullpage():
     """)
 
     return page.end(AUTHOR="Muhiddinov Abdulhodiy")
-
 def newpage():
     page = HTML(title_document = "new page for mojiza test")
-    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
+    page.meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    page.link(rel="icon", href=Static("image/Sharingan_Kakashi.png"), type="image/png")
     page.div(h_class="ho").p("hello")
     list_of_numbers = [i for i in range(100)]
 
@@ -393,13 +381,10 @@ def newpage():
     for i in range(100):
         page.div(h_class = "test-with-for").p(f"{i}")
     return page.end(AUTHOR='Muhiddinov Abdulhodiy')
-
-
-
-
 def login_view():
     page = HTML(title_document="Login Page - Mojiza Framework")
-    page.link(rel="icon", href=Static("Sharingan_Kakashi.png"), type="image/png")
+    page.meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    page.link(rel="icon", href=Static("imageSharingan_Kakashi.png"), type="image/png")
 
 
     # CSS qo‘shamiz
@@ -452,7 +437,7 @@ def login_view():
     return page.end(AUTHOR="Thony - Future Senior Dev 😎")
 
 
-from .backend_html import project_home, guess_number_page, mojiza_mtml_documentation
+from .backend_html import project_home, guess_number_page, generate_modern_welcome_page
 
 project_home()
-mojiza_mtml_documentation()
+generate_modern_welcome_page()

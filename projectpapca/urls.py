@@ -1,5 +1,5 @@
 from MOJIZA.engine.routing import PAGE
-from projectpapca.views import fullpage, newpage, login_view, guess_number_page,project_home, mojiza_mtml_documentation
+from projectpapca.views import fullpage, newpage, login_view, guess_number_page,project_home, generate_modern_welcome_page
 
 base_urls = "/"  # localhost:8000/papca
 space_name = "home"
@@ -27,7 +27,7 @@ def hame_s(method, params):
 
 @PAGE('/doc')
 def doc(method, params):
-    return mojiza_mtml_documentation()
+    return generate_modern_welcome_page()
 
 
 # @PAGE('/test')
