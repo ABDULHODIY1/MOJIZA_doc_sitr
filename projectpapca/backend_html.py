@@ -260,6 +260,7 @@ def generate_modern_welcome_page():
     intro = page.div(h_class="block intro")
     intro.h1("👨‍💻 Mojiza Framework: Welcome Developers!")
     intro.p("Mojiza — bu HTML sahifalarni Python orqali yaratish uchun ishlab chiqilgan eng yengil va kuchli tizimdir. Quyida siz undan qanday foydalanishni bosqichma-bosqich o‘rganasiz.")
+    intro.center().h6("Saxifa hali Toliq bitrilmagan! ustida ishlayapmiz!",style="color:red;")
     intro.a("Get Started Now", href="#import-section", h_class="button")
 
     imp = page.div(h_class="block import", id="import-section")
