@@ -295,7 +295,7 @@ div.p("Bu Mojiza yordamida yaratilgan paragraf.")""")
     usage.p("Mojiza faqat statik emas, balki dinamik, interaktiv sahifalarni ham yaratishga imkon beradi.")
 
     # 1000+ qatordan kam bo‘lmasligi uchun 200+ blok generatsiyasi
-    for i in range(5, 205):
+    for i in range(5, 6):
         block = page.div(h_class=f"block example-{i}", id=f"example-{i}")
         block.h2(f"🔹 {i}. Misol: Dinamik HTML generatsiyasi")
         block.p(f"Siz {i}-blok orqali qanday qilib Python yordamida HTML kodlar yaratish mumkinligini ko‘ryapsiz. Har bir blok o‘ziga xos bo‘lib, real holatlarda qo‘llanishi mumkin.")
