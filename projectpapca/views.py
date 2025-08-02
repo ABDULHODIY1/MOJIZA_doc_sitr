@@ -369,6 +369,7 @@ def fullpage():
     """)
 
     return page.end(AUTHOR="Muhiddinov Abdulhodiy")
+
 def newpage():
     page = HTML(title_document = "new page for mojiza test")
     page.meta(name="viewport", content="width=device-width, initial-scale=1.0")

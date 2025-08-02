@@ -263,13 +263,20 @@ def generate_modern_welcome_page():
     intro.a("Get Started Now", href="#import-section", h_class="button")
 
     imp = page.div(h_class="block import", id="import-section")
-    imp.h1("📦 1. Import qilish")
+    imp.h1("📦 1. Ornatish")
+    imp.p(
+        "Dastlab biz Mojiza Frameworkʼning kerakli modullarini oornatib olamiz""")
+    imp.code("""pip install mojiza==0.1.3b1 """)
+
+
+    imp = page.div(h_class="block import", id="import-section")
+    imp.h1("📦 2. Import qilish")
     imp.p("Dastlab biz Mojiza Frameworkʼning kerakli modullarini import qilamiz: `HTML` sahifalar yaratish uchun, `Static` esa media fayllar uchun.")
     imp.code("""from MOJIZA.engine.server import HTML
 from MOJIZA.static.make_static import Static""")
 
     create = page.div(h_class="block create", id="create-section")
-    create.h1("🛠 2. HTML Sahifa Yaratish")
+    create.h1("🛠 3. HTML Sahifa Yaratish")
     create.p("Endi esa biz HTML sahifa obʼyektini yaratamiz. Unda hujjat sarlavhasi va URL yo‘li belgilanadi.")
     create.code("""page = HTML(
     title_document="Mening Mojiza Sahifam",
@@ -277,14 +284,14 @@ from MOJIZA.static.make_static import Static""")
 )""")
 
     explain = page.div(h_class="block explain", id="structure-section")
-    explain.h1("🧱 3. Sahifa Strukturasi")
+    explain.h1("🧱 4. Sahifa Strukturasi")
     explain.p("Mojiza yordamida HTMLʼning barcha elementlarini Python bilan yaratish mumkin. Quyidagi misol `div`, `h1`, va `p` elementlarini qanday yaratishni ko‘rsatadi.")
     explain.code("""div = page.div(h_class='container')
 div.h1("Salom Mojiza")
 div.p("Bu Mojiza yordamida yaratilgan paragraf.")""")
 
     usage = page.div(h_class="block usage", id="usage-section")
-    usage.h1("🧪 4. Foydalanish bo‘yicha misollar")
+    usage.h1("🧪 5. Foydalanish bo‘yicha misollar")
     usage.p("Mojiza faqat statik emas, balki dinamik, interaktiv sahifalarni ham yaratishga imkon beradi.")
 
     # 1000+ qatordan kam bo‘lmasligi uchun 200+ blok generatsiyasi
