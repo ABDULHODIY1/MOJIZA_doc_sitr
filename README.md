@@ -1,5 +1,1 @@
-# MOJIZA_doc_sitr
-# MOJIZA_doc_sitr
-# MOJIZA_doc_sitr
-# MOJIZA_doc_sitr
-# MOJIZA_doc_sitr
+# MOJIZA_doc_sitr for render.com
